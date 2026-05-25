@@ -1,0 +1,22 @@
+name: first-action
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: action/checkout@v4
+
+      - name: setup python
+        uses: action/python@3
+
+      - name: install dependencies
+        uses: python -m pip install
+
+      - name: run tests
+        uses: py helloworld.py
